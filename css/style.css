@@ -1,7 +1,90 @@
-html{
+/* html{
     box-sizing: border-box;
 }
 
 *,*::before, *::after {
     box-sizing:inherit;
+}
+
+
+
+/* div {
+    max-width: ;
+} */
+
+/* img{
+    max-width: 1200px;
+    margin: 0 auto;
+} */ 
+
+header {
+    background-color: black;
+    width: 100%;
+}
+
+.about {
+    display: flex;
+}
+nav ul{
+    list-style-type: none;
+    text-decoration:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content:flex-end;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav p{
+    padding:0;
+    margin:0;
+    display:flex;
+    justify-content:flex-start;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav img{
+    width:100%;
+    padding: 2.5rem ;
+    background-color: black;
+
+}
+.services {
+    display:flex;
+}
+
+.services div {
+  width:50%;
+  padding: .5em;
+  display:flex;
+  flex-direction: column;
+}
+
+/* .services p {
+    flex-grow: 1;
+} */
+
+blockquote {
+    display:flex;
+}
+
+.social-icons {
+    width:50px;
+}
+
+/* .social-icons div{
+    display:block;
+    justify-content: space-evenly;
+} */
+
+/* .social-icons div{
+    display:flex;
+    flex-direction: row;
+} */
+
+.portfolio-pieces {
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto ;
+  
 }
