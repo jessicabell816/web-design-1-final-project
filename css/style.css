@@ -21,10 +21,7 @@ header {
     width: 100%;
 }
 
-.about {
-    display: flex;
-}
-nav ul{
+nav ul {
     padding:0;
     margin:0;
     display:flex;
@@ -32,52 +29,91 @@ nav ul{
    
 }
 
-nav ul li{
+nav ul li {
     padding-right:1rem;
     padding-left:1rem;
+    margin:0;
     list-style-type: none;
     font-family: 'Arimo', sans-serif;
     color: white;
 }
 
-nav p{
-    padding:0;
+/* Find a way to make everything at the top line up */
+nav p {
+    padding-right:1rem;
+    padding-left:1rem;
     margin:0;
-    display:flex;
-    justify-content:flex-start;
+    display:block;
+    text-align:left;
     font-family: 'Arimo', sans-serif;
+    font-weight: 600;
+    font-size: 2em;
     color: white;
 }
 
-nav img{
+nav a:link,
+nav a:visited{
+    color:white;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus{
+    color:#aad7d2;
+    text-decoration: none;
+}
+
+nav img {
     width:100%;
     padding: 2.5rem ;
     background-color: black;
 }
 
-h1{
+
+.about {
+    display: flex;
+}
+
+/* Make bio-pic image  go all th way to the end of the page when expnading*/
+/* .about img {
+    display: flex;
+} */
+
+h1 {
     font-family: 'Arimo', sans-serif;
     font-weight: 700;
 }
 
-h2{
+h2 {
     font-family: 'Arimo', sans-serif;
     font-weight: 600; 
+    text-align:center;
 }
 
-h3{
+.about h2{
+    text-align:left;
+}
+
+h3 {
     font-family: 'Arimo', sans-serif;
     font-weight: 500; 
 }
 
-p{
+p {
     font-family: 'Arimo', sans-serif;
     font-weight: 400;
+    max-width: 33em;
 }
 .services {
     display:flex;
     background-color: #f5f5f5;
     width: 100%;
+}
+/* Find out a way to make the subtitle 'What I can do for you...' not in a colomn with the rest of the information */
+.services h2 {
+    /* display:flex;
+    flex-direction: row; */
+    text-align:left;
 }
 
 .services div {
@@ -85,6 +121,25 @@ p{
   padding: .5em;
   display:flex;
   flex-direction: column;
+}
+
+/* Create backgrounds behind each service and buttins for the 'Learn More' */
+/* .service-1
+.service-2
+.service-3 */
+
+#my-work p{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contact-me p{
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* .services p {
@@ -101,6 +156,8 @@ p{
     flex-direction: row;
 } */
 
+
+/* Fix everything going on with the grid */
 .portfolio-pieces {
     display:grid;
     /* grid-template-columns: 3fr 3fr;
@@ -136,16 +193,36 @@ p{
     grid-row: 2;
 }
 
-.block-quotes{
+.block-quotes {
+    display:flex;
     background-color: black;
     width: 100%;
     color:white;
 }
 
-blockquote {
+/* .block-quotes div {
+    width:50%;
+    padding: .5em;
     display:flex;
+    flex-direction: column;
+  } */
+
+blockquote {
+    max-width: 33em;
+}
+/* Make the blockquotes italic and lined up correctly */
+
+/* Make the icons horizontal and centered (probably with flex) */
+.social-icons {
+    width:35px;
 }
 
-.social-icons {
-    width:50px;
+footer{
+    display:flex;
+    background-color: black;
+    width: 100%;
+    color:white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
