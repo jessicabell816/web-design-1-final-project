@@ -21,6 +21,14 @@ header {
     width: 100%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    background-size: 100%;
+}
+
 nav ul {
     padding:0;
     margin:0;
@@ -29,6 +37,7 @@ nav ul {
    
 }
 
+/* Find a way to make everything at the top line up */
 nav ul li {
     padding-right:1rem;
     padding-left:1rem;
@@ -38,13 +47,12 @@ nav ul li {
     color: white;
 }
 
-/* Find a way to make everything at the top line up */
 nav p {
     padding-right:1rem;
     padding-left:1rem;
-    margin:0;
-    display:block;
-    text-align:left;
+    margin:1rem;
+    display:flex;
+    justify-content:flex-start;
     font-family: 'Arimo', sans-serif;
     font-weight: 600;
     font-size: 2em;
@@ -63,7 +71,7 @@ nav a:focus{
     text-decoration: none;
 }
 
-nav img {
+header img {
     width:100%;
     padding: 2.5rem ;
     background-color: black;
@@ -75,9 +83,10 @@ nav img {
 }
 
 /* Make bio-pic image  go all th way to the end of the page when expnading*/
-/* .about img {
+.about img {
     display: flex;
-} */
+    justify-content:flex-end;
+}
 
 h1 {
     font-family: 'Arimo', sans-serif;
@@ -104,16 +113,17 @@ p {
     font-weight: 400;
     max-width: 33em;
 }
+
+/* Find out a way to make the subtitle 'What I can do for you...' in the gray background */
 .services {
     display:flex;
     background-color: #f5f5f5;
-    width: 100%;
+    background-size: 200em;
+    /* width: 200em; */
+    max-width: 100%;
 }
-/* Find out a way to make the subtitle 'What I can do for you...' not in a colomn with the rest of the information */
-.services h2 {
-    /* display:flex;
-    flex-direction: row; */
-    text-align:left;
+#services h2 {
+    text-align:center;
 }
 
 .services div {
@@ -123,9 +133,42 @@ p {
   flex-direction: column;
 }
 
+.services a{
+    padding: .1em .25em .1em .25em;
+    border-radius:4px;
+    /* display:inline; */
+    font-family: 'Arimo', sans-serif;
+    font-weight:400;
+}
+
+.services a:link, 
+.services a:visited{
+    background-color:black;
+    color:white;
+    border:1px solid black;
+    text-decoration: none;
+  }
+
+  
+.services a:hover,
+.services a:focus{
+    background-color:white;
+    color: black;
+    border:2px solid black;
+  }
+
+.services p {
+    flex-grow: 1;
+}
+
 /* Create backgrounds behind each service and buttins for the 'Learn More' */
-/* .service-1
-.service-2
+.service-1{
+    background-color:white;
+    border:1px solid #bcbcbc;
+    padding: .1em .25em .1em .25em;
+    border-radius:4px;
+}
+/* .service-2
 .service-3 */
 
 #my-work p{
@@ -142,10 +185,6 @@ p {
     margin-right: auto;
 }
 
-/* .services p {
-    flex-grow: 1;
-} */
-
 /* .social-icons div{
     display:block;
     justify-content: space-evenly;
@@ -160,40 +199,50 @@ p {
 /* Fix everything going on with the grid */
 .portfolio-pieces {
     display:grid;
-    /* grid-template-columns: 3fr 3fr;
-    grid-template-rows: 2fr 2fr 2fr; */
-    grid-column-gap:0px;
-    grid-row-gap: 0px;
+    /* grid-template-columns: repeat(1fr); */
+    grid-template-columns: repeat(6/ 1fr);
+    /* margin: 0;
+    padding: 0; */
+    grid-gap: 0px;
+    justify-items: stretch;
+    align-items: center;
 }
 
 .piece-1 {
     grid-column: 1/ span 3;
     grid-row: 1;
-    grid-column-gap:0px;
-    grid-row-gap: 0px;
+    justify-self:stretch;
+    /* margin: 0; */
+    
 }
 
 .piece-2 {
-    grid-column: 2/ span 3;
+    grid-column: 4/ span 7;
     grid-row: 1;
+    
+    /* margin: 0; */
 }
 
 .piece-3 {
     grid-column: 1/ span 2;
     grid-row: 2;
+    justify-self:stretch;
+    /* margin: 0; */
 }
 
 .piece-4 {
-    grid-column: 2/ span 2;
+    grid-column: 3/ span 2;
     grid-row: 2;
+    /* margin: 0; */
 }
 
 .piece-5 {
-    grid-column: 3/ span 2;
+    grid-column: 5/ span 2;
     grid-row: 2;
+    /* margin: 0; */
 }
 
-.block-quotes {
+.block {
     display:flex;
     background-color: black;
     width: 100%;
@@ -207,9 +256,33 @@ p {
     flex-direction: column;
   } */
 
+.block div {
+    width:50%;
+    padding: .5em;
+    display:flex;
+    flex-direction: column;
+  }
+/* some issues here have to be fixed */
+
+.block p{
+    font-weight:400;
+    font-size: .70rem;
+    color: #bcbcbc;
+}
 blockquote {
+    font-family: 'Arimo', sans-serif;
+    font-weight:400;
+    font-size: .85rem;
+    font-style: italic;
+    text-align:center;
     max-width: 33em;
 }
+
+
+/* .block p{
+    flex-grow: 1;
+} */
+
 /* Make the blockquotes italic and lined up correctly */
 
 /* Make the icons horizontal and centered (probably with flex) */
@@ -222,7 +295,10 @@ footer{
     background-color: black;
     width: 100%;
     color:white;
+}
+
+footer p{
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
 }
